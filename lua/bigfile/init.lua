@@ -42,7 +42,7 @@ end
 ---@param target_unit filesize_unit
 local function convert_to_filesize_unit(size, target_unit)
   if target_unit == "MiB" then
-    return math.floor(0.5 + size / 1024 * 1024)
+    return math.floor(0.5 + size / (1024 * 1024))
   end
   return size
 end
